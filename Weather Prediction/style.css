@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg, #69a8df, #74c3c7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    background-color: azure;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    background: #c0d9ef;
+    height: 40px;
+    width: 90%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    color: #000;
+    text-align: center;
+}
+
+button {
+    background: #c0d9ef;
+    border-radius: 20px;
+    height: 40px;
+    width: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #74c3c7;
+}
+
+/* Weather Info Box */
+.weather-box {
+    margin-top: 20px;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* Weather Image Box */
+.image-box {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#weatherImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
