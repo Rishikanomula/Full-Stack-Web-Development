@@ -4,7 +4,7 @@ const cityInput = document.getElementById('cityInput');
 const searchButton = document.getElementById('searchButton');
 const cityNameElement = document.getElementById('cityName');
 const temperatureElement = document.getElementById('temperature');
-const descriptionElement = document.getElementById('descripition');
+const descriptionElement = document.getElementById('description');
 
 
 searchButton.addEventListener('click', () => {
@@ -25,7 +25,7 @@ function getWeather(city) {
         .then(response => {
             if (!response.ok) {
                 return response.json().then(errorData => {
-                    throw new Error(errorData.message || 'City not found. Please check the spelling.');
+                    throw new Error(errorData.message || 'City not found.');
                 });
             }
             return response.json();
@@ -41,6 +41,11 @@ function getWeather(city) {
 }
 
 function displayWeather(data) {
+    if (!data.weather || data.weather.length === 0) {
+        console.error('Weather data is missing:', data);
+        alert('Weather data not found for this location.');
+        return;
+    }
     // Extract relevant data from the API response
     const cityName = data.name;
     const temperature = (data.main.temp - 273.15).toFixed(2); // Convert Kelvin to Celsius

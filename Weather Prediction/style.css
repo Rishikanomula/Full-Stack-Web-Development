@@ -14,9 +14,11 @@ body {
 .container {
     background-color: azure;
     padding: 30px;
+    padding-right:20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
 }
 
@@ -33,7 +35,7 @@ input {
     height: 40px;
     width: 90%;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     padding: 10px;
     color: #000;
     text-align: center;
@@ -43,21 +45,21 @@ button {
     background: #c0d9ef;
     border-radius: 20px;
     height: 40px;
-    width: 50%;
-    align-self: auto;/*Check this once*/
+    width: 90%;
+    margin: 0 auto;  
     border: 1px solid black;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
 button:hover {
-    background: #74c3c7;
+    background: #abc5dc;
 }
 
 /* Weather Info Box */
 .weather-box {
-    width: 300px;
-    height: 250x;
+    width: 90%;
+    height: 250px; /* Fixed typo */
     margin-top: 20px;
     background-color: pink;
     padding: 20px;
@@ -67,19 +69,18 @@ button:hover {
 
 /* Weather Image Box */
 .image-box {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-    margin-right:10px;
-    margin-left:20px;
-    background-color: white;
-    padding: 25px;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 0;
+    background-color: rgb(199, 225, 176);
     border-radius: 10px;
     border: 2px solid black;
 }
 
 #weatherImage {
     max-width: 100%;
-    height: auto;
+    height: 100px;
+    width: 100px;
+    margin-top: 30px;
     border-radius: 10px;
 }
