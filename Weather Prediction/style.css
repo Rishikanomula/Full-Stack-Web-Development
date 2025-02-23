@@ -15,6 +15,7 @@ body {
     background-color: azure;
     padding: 30px;
     padding-right:20px;
+
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -71,7 +72,7 @@ button:hover {
 .image-box {
     width: 150px;
     height: 150px;
-    margin: 20px auto 0;
+    margin: 20px;
     background-color: rgb(199, 225, 176);
     border-radius: 10px;
     border: 2px solid black;
