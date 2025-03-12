@@ -38,12 +38,12 @@ input {
     background: #9cd1ff;
     height: 20px;
     width: 100%;
-    border: 1px solid rgb(39, 38, 38);
+    border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
-    /* color: #000; */
     text-align: center;
     color: black;
+    font-weight: bold;
 }
 
 button {
@@ -71,10 +71,10 @@ button:hover {
 /* Weather Info Box */
 .weather-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap:15px;
-    flex-direction: column;
     width: 90%;
     height: 250px; /* Fixed typo */
     margin-top: 20px;
@@ -82,6 +82,20 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #ccc;
+}
+#cityName{
+    font-size: 22px;
+    font-weight: bold;
+    color: #335b74;
+}
+#temperature{
+    font-size: 20px;
+    font-weight: bold;
+}
+#discription{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 /* Weather Image Box */
@@ -92,7 +106,7 @@ button:hover {
     width: 150px;
     height: 150px;
     margin: 20px;
-    background: linear-gradient(120deg, #e5e1e8, #69b4da, #aed2d4);
+    background: linear-gradient(120deg, #e5e1e8, #7ad3ff, #aed2d4);
     border-radius: 10px;
     border: 1px solid black;
 }
