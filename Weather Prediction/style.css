@@ -118,3 +118,15 @@ button:hover {
     margin-top: 8px;
     border-radius: 10px;
 }
+.weather-box p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+    font-weight: bold;
+}
+#sunrise,#sunset{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+}
