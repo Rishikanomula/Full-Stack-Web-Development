@@ -74,7 +74,7 @@ button:hover {
     max-width: 500px;
 
     margin-top: 20px;
-    background-color: rgb(148, 237, 255);
+    background-color: rgba(138, 188, 231, 0.821);
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -84,7 +84,7 @@ button:hover {
 #cityName{
     font-size: 22px;
     font-weight: bold;
-    color: #335b74;
+    color: #252729;
 }
 #temperature{
     font-size: 20px;
@@ -104,17 +104,17 @@ button:hover {
     width: 150px;
     height: 150px;
     margin: 20px;
-    background: linear-gradient(120deg, #e5e1e8, #7ad3ff, #aed2d4);
-    border-radius: 10px;
-    border: 1px solid black;
+    background: linear-gradient(120deg, #e5e1e8, #88aabb, #aed2d4);
+    border-radius: 50%;
+    box-shadow: #212121 5px 0px 10px;
 }
 
 #weatherImage {
-    max-width: 100%;
+    max-width: 80%;
     height: 100px;
     width: 100px;
     margin-top: 8px;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 .weather-box p {
     font-size: 16px;
@@ -126,5 +126,5 @@ button:hover {
     font-size: 16px;
     font-style: italic;
     font-weight: bold;
-    color: #555;
+    color: #333;
 }
