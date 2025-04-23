@@ -22,31 +22,32 @@ function getWeather(city) {
     console.log('API URL:', apiUrl); 
 
     fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("loadingMessage").style.display = "none";
-            displayWeather(data);
-        })
-        .catch(error => {
-            document.getElementById("loadingMessage").style.display = "none"; 
-            alert('Error: ' + error.message);
-        });
-        // .then(response => {
-        //     if (!response.ok) {
-        //         return response.json().then(errorData => {
-        //             throw new Error(errorData.message || 'City not found.');
-        //         });
-        //     }
-        //     return response.json();
-        // })
+        // .then(response => response.json())
         // .then(data => {
-        //     console.log('API Response:', data); 
-        //     displayWeather(data); 
+        //     document.getElementById("loadingMessage").style.display = "none";
+        //     displayWeather(data);
         // })
         // .catch(error => {
-        //     console.error('Error fetching weather data:', error);
-        //     alert('Error: ' + error.message); 
+        //     document.getElementById("loadingMessage").style.display = "none"; 
+        //     alert('Error: ' + error.message);
         // });
+
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw new Error(errorData.message || 'City not found.');
+                });
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('API Response:', data); 
+            displayWeather(data); 
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            alert('Error: ' + error.message); 
+        });
 }
 
 function changeBackground(weatherCondition) {
@@ -123,4 +124,17 @@ function displayWeather(data) {
         console.error("weatherImage element not found.");
     }
     changeBackground(weatherCondition);
+}
+
+function displayError(message){
+    cityNameElement.textContent=message;
+    temperatureElement.textContent = "";
+    descriptionElement.textContent = "";
+    document.getElementById("feelsLike").textContent = "No data available";
+    document.getElementById("humidity").textContent = "No data available";
+    document.getElementById("windSpeed").textContent = "No data available";
+    document.getElementById("pressure").textContent = "No data available";
+    document.getElementById("sunrise").textContent = "No data available";
+    document.getElementById("sunset").textContent = "No data available";
+    document.getElementById("weatherImage").src = "images/default.gif";
 }

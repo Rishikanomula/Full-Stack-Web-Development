@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <h2>Weather At Any Place</h2>
+        <h2>Weather Forecast</h2>
         <div class="search-box">
             <input type="text" id="cityInput" placeholder="Enter city name">
-            <button id="searchButton">Search</button>
+            <button id="searchButton">
+                <i class="fas fa-search">Search</i>
+            </button>
         </div>
         
         <div class="weather-box">
             <h2 id="cityName"></h2>
+            <img id="weatherImage" src="images/default.gif" alt="Weather icon">
             <p id="temperature"></p>
             <p id="description"></p>
             <p id="feelsLike"></p>
@@ -26,10 +30,9 @@
             <p id="sunset"></p>
         </div> 
     </div>
-
-    <div class="image-box">
+    <!-- <div class="image-box">
         <img id="weatherImage" src="images/default.gif" alt="Weather condition">
-    </div>
+    </div> -->
     <p id="loadingMessage" style="display: none; font-size: 16px;">Fetching weather data...</p>
     <script src="script.js"></script>
 </body>

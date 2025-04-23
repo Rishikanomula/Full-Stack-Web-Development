@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Responsive form validation</title> 
+<script lang="javascript"> 
+function validate(){ 
+var uname = document.myform.tf1,value 
+var pwd=document.myform.tf2.value 
+var emailid=document.myform.tf3.value 
+var Phoneno=document.myform.tf4.value 
+var p1=new RegExp("^[a-z]*") 
+var p2=new RegExp("[a-z]*[._][a-z 0-9]*@[a-z 0-9]*[.]com$") 
+var p3=new RegExp("^[0-9]{10}$") 
+if(p1.test(uname)&&(uname.length>=6)){ 
+alert("Valid username") 
+}else{ 
+alert("invalid username") 
+} 
+if(pwd.length>=6){ 
+alert("Valid password") 
+} 
+else{ 
+alert("invalid password") 
+} 
+if(p2.test(emailid)){ 
+alert("valid email") 
+}else{ 
+alert("inavlid email") 
+}if(p3.test(Phoneno)){ 
+alert("valid phone number") 
+}else{ 
+alert("invalid phonenumber") 
+} 
+} 
+</script> 
+</head> 
+<body> 
+    <div align ="center"> 
+        <h2>Registartion form</h2> 
+        <hr width ="275" color="red" size="10"> 
+        <br> 
+        <form name="myform"> 
+        <table> 
+        <tr> 
+        <td> 
+        <label>Name:</label> 
+        </td> 
+        <td> <input type="text" name="tf1"></td> 
+        </tr> 
+        <tr> 
+        <td> 
+        <label>Passwoard:</label> 
+        </td> 
+        <td> <input type="password" name="tf2"></td> 
+        </tr> 
+        <tr> 
+        <td> 
+        <label>Email id:</label> 
+        </td> 
+        <td> <input type="text" name="tf3"></td> 
+        </tr> 
+        <tr> 
+        <td> 
+        <label>Phone no:</label> 
+        </td> 
+        <td><input type="text" name="tf4"></td> 
+        </tr> 
+        <tr> 
+            <td> <input type="button" value="check" onclick=validate()><input type="reset" value="close"></td>
+        </tr> 
+        </table> 
+        </form> 
+        </div> 
+        </div> 
+    </body> 
+</html>
